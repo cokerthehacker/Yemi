@@ -161,6 +161,8 @@
             }
 
             nav ul.show {
+                position: fixed;
+                right: 10%;
                 display: flex; /* Show when the menu is active */
             }
 
@@ -173,6 +175,17 @@
         }
     </style>
 </head>
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.querySelector('.menu-icon');
+        const navList = document.querySelector('nav ul');
+
+        menuIcon.addEventListener('click', function () {
+            navList.classList.toggle('show');
+        });
+    });
+</script>
 
 <body>
     <!-- Navigation Bar -->
