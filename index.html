@@ -145,7 +145,7 @@
             }
 
             h1 {
-                font-size: 40px !important; /* Adjust the font size for mobile view */
+                font-size: 40px !important;
             }
 
             .menu-icon {
@@ -155,21 +155,22 @@
             }
 
             nav ul {
-                display: none; /* Hide on smaller screens */
-                flex-direction: column; /* Stack items vertically */
-                text-align: right; /* Align items to the right */
+                position: fixed;
+                display: none;
+                flex-direction: column;
+                text-align: right;
             }
 
             nav ul.show {
                 position: fixed;
                 right: 10%;
-                display: flex; /* Show when the menu is active */
+                display: flex;
             }
 
             .profile-circle {
-                width: 350px; /* Adjust for smaller screens */
-                height: 350px; /* Adjust for smaller screens */
-                top: 170px; /* Adjusted position for smaller screens */
+                width: 350px;
+                height: 350px;
+                top: 170px;
                 right: -30%;
             }
         }
