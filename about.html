@@ -19,7 +19,7 @@
             background-position: center;
             color: #000000;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         nav {
@@ -89,10 +89,13 @@
 
         .menu-icon {
             position: fixed;
-            display: none; /* Hide by default */
+            display: none;
             cursor: pointer;
             font-size: 1.5em;
             z-index: 99;
+            right: 20px;
+            top: 20px;
+            color: white;
         }
 
         .profile-circle {
@@ -113,6 +116,10 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+
             section {
                 padding: 20px;
                 margin: 4%;
@@ -123,9 +130,7 @@
             }
 
             .menu-icon {
-                position: fixed;
-                right: 6%;
-                display: block; /* Show on smaller screens */
+                display: block;
             }
 
             nav ul {
@@ -133,12 +138,21 @@
                 display: none;
                 flex-direction: column;
                 text-align: right;
+                background-color: rgba(0, 0, 0, 0.8);
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
             }
 
             nav ul.show {
-                position: fixed;
-                right: 10%;
                 display: flex;
+            }
+
+            nav li {
+                margin: 20px 0;
             }
 
             .profile-circle {

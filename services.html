@@ -80,6 +80,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
 
         .service:hover {
@@ -104,7 +105,7 @@
 
         .menu-icon {
             position: fixed;
-            display: none; /* Hide by default */
+            display: none;
             cursor: pointer;
             font-size: 1.5em;
             z-index: 3;
@@ -123,7 +124,7 @@
             .menu-icon {
                 position: fixed;
                 right: 6%;
-                display: block; /* Show on smaller screens */
+                display: block;
             }
 
             nav ul {
@@ -131,12 +132,21 @@
                 display: none;
                 flex-direction: column;
                 text-align: right;
+                background-color: rgba(0, 0, 0, 0.8);
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
             }
 
             nav ul.show {
-                position: fixed;
-                right: 10%;
                 display: flex;
+            }
+
+            nav li {
+                margin: 20px 0;
             }
         }
     </style>
@@ -165,7 +175,7 @@
         </div>
 
         <div class="service" onclick="sendEmail('UI/UX Design')">
-            <h2>uiux Design</h2>
+            <h2>UI/UX Design</h2>
             <p>I build powerful and user-friendly interfaces and experiences for all platforms.</p>
         </div>
 
@@ -176,11 +186,10 @@
 
         <div class="service" onclick="sendEmail('Deep Learning')">
             <h2>Deep Learning</h2>
-            <p>Let's unlock priceless advanced Articial Intelligence technology.</p>
+            <p>Let's unlock priceless advanced Artificial Intelligence technology.</p>
         </div>
-
-
     </section>
+
     <script src="script.js"></script>
     <script>
         function sendEmail(serviceName) {
@@ -191,3 +200,5 @@
         }
     </script>
 </body>
+
+</html>
